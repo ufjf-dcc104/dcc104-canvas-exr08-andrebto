@@ -80,7 +80,7 @@ Map.prototype.mover = function (dt) {
 			var min_x = Math.max(0,gx-bombs_power);
 			var max_x = Math.min(Math.floor(canvas.width/40),gx+bombs_power);
 			var min_y = Math.max(0,gy-bombs_power);
-			var max_y = Math.min(Math.floor(canvas.width/40),gy+bombs_power);
+			var max_y = Math.min(Math.floor(canvas.height/40),gy+bombs_power);
 			for(var k = gy; k >= min_y; --k){
 				if(this.cells[k][gx] == 1)
 					break;
@@ -142,7 +142,7 @@ Map.prototype.mover = function (dt) {
 			var min_x = Math.max(0,gx-this.bombs[i].power);
 			var max_x = Math.min(Math.floor(canvas.width/40),gx+this.bombs[i].power);
 			var min_y = Math.max(0,gy-this.bombs[i].power);
-			var max_y = Math.min(Math.floor(canvas.width/40),gy+this.bombs[i].power);
+			var max_y = Math.min(Math.floor(canvas.height/40),gy+this.bombs[i].power);
 			for(var k = gy; k >= min_y; --k){
 				if(this.cells[k][gx] == 1)
 					break;
